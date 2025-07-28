@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="font-nunito h-[100%]">
+    <main>
+      <div class="mx-3 mt-5 sm:mt-6 md:mt-7">
+        <div
+          class="flex items-center space-x-[8rem] sm:gap-x-[30rem] md:gap-x-[15rem] lg:gap-x-[30rem] md:text-[2rem] lg:text-[2rem]"
+        >
+          <img
+            id="closeSettingsOverlay"
+            class="cursor-pointer"
+            src="../src/images/back.png"
+            alt="back-arrow"
+          />
+          <h1 class="text-2xl font-semibold text-[#3b66d7]">Settings</h1>
+        </div>
+        <div
+          class="max-w-8/10 sm:max-w-9/10 md:max-w-9/10 lg:max-w-9/10 mx-auto mt-[7rem]"
+        >
+          <!-- Notification -->
+          <div class="flex items-center justify-between mt-[2rem]">
+            <div class="cursor-pointer">
+              <a
+                href="#"
+                class="flex items-center gap-x-[4rem] sm:gap-x-[30rem] md:gap-x-[10rem] lg:gap-x-[30rem]"
+              >
+                <img src="../src/images/notifications.png" alt="privacy-icon" />
+                <h1
+                  class="font-[400] text-[#3B66D7] text-center sm:text-3xl md:text-2xl lg:text-2xl text-2xs"
+                >
+                  Notifications
+                </h1>
+              </a>
+            </div>
+            <a href="#">
+              <img
+                class="cursor-pointer w-3 sm:w-5"
+                src="../src/images/front.png"
+                alt="forward-icon"
+              />
+            </a>
+          </div>
+
+          <!-- Privacy -->
+          <div class="flex items-center justify-between mt-[2rem]">
+            <div class="cursor-pointer">
+              <a
+                href="#"
+                class="flex items-center gap-x-[4rem] sm:gap-x-[30rem] md:gap-x-[10rem] lg:gap-x-[30rem]"
+              >
+                <img src="../src/images/privacy.png" alt="privacy-icon" />
+                <h1
+                  class="font-[400] text-[#3B66D7] text-center sm:text-3xl md:text-2xl lg:text-2xl text-2xs"
+                >
+                  Privacy
+                </h1>
+              </a>
+            </div>
+            <a href="#">
+              <img
+                class="cursor-pointer w-3 sm:w-5"
+                src="../src/images/front.png"
+                alt="forward-icon"
+              />
+            </a>
+          </div>
+          <!-- Change Password -->
+          <div class="flex items-center justify-between mt-[2rem]">
+            <div class="cursor-pointer">
+              <a
+                href="#"
+                class="flex items-center gap-x-[4rem] sm:gap-x-[30rem] md:gap-x-[10rem] lg:gap-x-[30rem]"
+              >
+                <img
+                  class=""
+                  src="../src/images/change-password.png"
+                  alt="change-password-icon"
+                />
+                <h1
+                  class="font-[400] text-[#3B66D7] text-center sm:text-3xl md:text-2xl lg:text-2xl text-2xs"
+                >
+                  Change Password
+                </h1>
+              </a>
+            </div>
+            <a href="#">
+              <img
+                class="cursor-pointer w-3 sm:w-5"
+                src="../src/images/front.png"
+                alt="forward-icon"
+              />
+            </a>
+          </div>
+          <!-- Help -->
+          <div class="flex items-center justify-between mt-[2rem]">
+            <div class="cursor-pointer">
+              <a
+                href="#"
+                class="flex items-center gap-x-[4rem] sm:gap-x-[30rem] md:gap-x-[10rem] lg:gap-x-[30rem]"
+              >
+                <img
+                  class="cursor-pointer"
+                  src="../src/images/help.png"
+                  alt="help-icon"
+                />
+                <h1
+                  class="font-[400] text-[#3B66D7] cursor-pointer text-center sm:text-3xl md:text-2xl lg:text-2xl text-2xs"
+                >
+                  Help
+                </h1>
+              </a>
+            </div>
+            <a href="#">
+              <img
+                class="cursor-pointer w-3 sm:w-5"
+                src="../src/images/front.png"
+                alt="forward-icon"
+              />
+            </a>
+          </div>
+          <!-- Change Pin -->
+          <div class="flex items-center justify-between mt-[2rem]">
+            <div class="cursor-pointer">
+              <a
+                href="#"
+                class="flex items-center gap-x-[4rem] sm:gap-x-[30rem] md:gap-x-[10rem] lg:gap-x-[30rem]"
+              >
+                <img
+                  class="cursor-pointer"
+                  src="../src/images/change-pin.png"
+                  alt="change-pin"
+                />
+                <h1
+                  class="font-[400] text-[#3B66D7] cursor-pointer text-center sm:text-3xl md:text-2xl lg:text-2xl text-2xs"
+                >
+                  Change Pin
+                </h1>
+              </a>
+            </div>
+            <a href="#">
+              <img
+                class="cursor-pointer w-3 sm:w-5"
+                src="../src/images/front.png"
+                alt="forward-icon"
+              />
+            </a>
+          </div>
+          <!--  Logout-->
+          <div class="flex items-center justify-between mt-[2rem]">
+            <div class="">
+              <a
+                href="#"
+                class="flex items-center gap-x-[4rem] sm:gap-x-[30rem] md:gap-x-[10rem] lg:gap-x-[30rem]"
+              >
+                <img
+                  class="cursor-pointer"
+                  src="../src/images/logout.png"
+                  alt="logout-icon"
+                />
+                <h1
+                  class="font-[400] text-[#3B66D7] cursor-pointer text-center sm:text-3xl md:text-2xl lg:text-2xl text-2xs"
+                >
+                  Logout
+                </h1>
+              </a>
+            </div>
+            <a href="#">
+              <img
+                class="cursor-pointer w-3 sm:w-5"
+                src="../src/images/front.png"
+                alt="forward-icon"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const closeBtn = document.getElementById("closeSettingsOverlay");
+
+        // Only run if this page is loaded inside an iframe
+        if (window.self !== window.top) {
+          closeBtn.addEventListener("click", function () {
+            // Ask the parent window (dashboard) to close the settings overlay
+            window.parent.postMessage("closeSettings", "*");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

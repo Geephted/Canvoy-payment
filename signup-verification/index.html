@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up Verification</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="min-h-dvh antialiased font-nunito text-secondary">
+    <main class="min-h-dvh lg:grid lg:grid-cols-2">
+      <section class="hidden lg:flex flex-col bg-primary p-16 xl:p-24">
+        <div class="flex flex-col gap-4">
+          <h1
+            class="font-poppins text-white text-3xl xl:text-5xl font-bold capitalize leading-[1.2]"
+          >
+            Simplify how you pay your bills
+          </h1>
+          <p class="text-tertiary mb-8">
+            With Canvoy, paying bills is fast, secure and frustration free.
+          </p>
+
+          <div
+            class="rounded-xl h-[400px] overflow-hidden mt-auto bg-[url(./images/verification-1.png)] bg-no-repeat bg-cover"
+          >
+            <!-- <img
+              src="../src/images/verification-1.png"
+              alt=""
+              class="object-center"
+            /> -->
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="p-4 max-lg:max-w-lg max-lg:mx-auto lg:px-16 lg:py-8 h-full lg:flex lg:flex-col xl:px-24 lg:gap-6"
+      >
+        <header
+          class="flex items-center justify-start lg:justify-center relative"
+        >
+          <img src="../src/images/logo.png" alt="" class="w-24" />
+          <a
+            href="../signup/"
+            class="flex items-center gap-2 absolute top-0 right-0"
+          >
+            <img src="../src/images/back-arrow.png" alt="" />
+            <span>Back</span>
+          </a>
+        </header>
+
+        <div class="flex flex-col gap-2 text-center mt-6 items-center">
+          <h2 class="text-blue-500 text-2xl font-bold capitalize font-poppins">
+            Enter Verification Code
+          </h2>
+          <p>A verification code has been sent to your email.</p>
+        </div>
+
+        <form id="verificationForm" class="mt-6 flex flex-col gap-2">
+          <div class="otp-container place-items-center grid gap-2 grid-cols-6">
+            <input
+              type="text"
+              class="otp-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="0"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              name="otp"
+              id="otp-1"
+              aria-label="digit 1 of 6"
+              autofocus
+            />
+            <input
+              type="text"
+              class="otp-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="1"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              name="otp"
+              aria-label="digit 2 of 6"
+              id="otp-2"
+            />
+            <input
+              type="text"
+              class="otp-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="2"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              name="otp"
+              aria-label="digit 3 of 6"
+              id="otp-3"
+            />
+            <input
+              type="text"
+              class="otp-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="3"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              name="otp"
+              aria-label="digit 4 of 6"
+              id="otp-4"
+            />
+            <input
+              type="text"
+              class="otp-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="4"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              name="otp"
+              aria-label="digit 5 of 6"
+              id="otp-5"
+            />
+            <input
+              type="text"
+              class="otp-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="5"
+              inputmode="numeric"
+              autocomplete="one-time-code"
+              name="otp"
+              aria-label="digit 6 of 6"
+              id="otp-6"
+            />
+          </div>
+          <input type="hidden" name="full_otp" id="full-otp" />
+          <p id="errorMessage" class="text-red-500" aria-live="polite"></p>
+        </form>
+
+        <div>
+          <p>
+            NOTE: your code will expire in
+            <span id="remainingMinutesCountdown">10:00</span>
+          </p>
+          <p>
+            Didn't get a code?
+            <button type="button" class="text-primary cursor-pointer">
+              Resend
+            </button>
+          </p>
+        </div>
+
+        <div class="text-center mt-16">
+          <button
+            type="submit"
+            form="verificationForm"
+            class="bg-primary text-white py-3 px-8 rounded-lg w-fit mx-auto cursor-pointer hover:bg-primary/80"
+          >
+            Proceed
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="../scripts/signup-verification.js"></script>
+  </body>
+</html>

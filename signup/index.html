@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up to Canvoy Payments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="min-h-dvh antialiased font-nunito text-secondary">
+    <main class="min-h-dvh lg:grid lg:grid-cols-2">
+      <section class="hidden lg:flex flex-col bg-primary p-16 xl:p-24">
+        <div class="flex flex-col gap-4">
+          <h1
+            class="font-poppins text-white text-3xl xl:text-5xl font-bold capitalize leading-[1.2]"
+          >
+            Simplify how you pay your bills
+          </h1>
+          <p class="text-tertiary mb-8">
+            With Canvoy, paying bills is fast, secure and frustration free.
+          </p>
+
+          <div class="bg-white rounded-xl p-8 grid place-items-center mt-auto">
+            <img src="../src/images/ILLUSTRATION.png" alt="" class="w-90" />
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="p-4 max-lg:max-w-lg max-lg:mx-auto lg:px-16 lg:py-8 h-full lg:flex lg:flex-col xl:px-24 lg:gap-6"
+      >
+        <header class="lg:flex flex-col gap-6 items-center justify-center">
+          <img src="../src/images/logo.png" alt="" class="w-24" />
+          <p class="hidden lg:block font-poppins text-blue-500 font-bold">
+            Skip the Hassle. Canvoy it.
+          </p>
+        </header>
+
+        <div
+          class="flex flex-col gap-2 text-center mt-6 items-center lg:hidden"
+        >
+          <h2 class="text-primary text-2xl font-bold capitalize font-poppins">
+            Create your canvoy account
+          </h2>
+          <p>With Canvoy, paying bills is fast, secure and frustration free.</p>
+        </div>
+
+        <form id="signUpForm" novalidate class="grid gap-4 mt-12" method="post">
+          <div class="grid gap-2">
+            <div
+              class="border flex items-center pl-2 rounded-md focus-within:border-primary has-[>input[data-invalid='true']]:border-red-500"
+            >
+              <label for="firstName" class="whitespace-nowrap font-semibold"
+                >First Name :</label
+              >
+              <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                required
+                autocomplete="given-name"
+                data-invalid="false"
+                class="w-full p-2 focus:outline-0 focus:border-0"
+              />
+            </div>
+            <p class="text-red-500" id="firstNameError"></p>
+          </div>
+
+          <div
+            class="border flex items-center pl-2 rounded-md focus-within:border-primary"
+          >
+            <label for="middleName" class="whitespace-nowrap font-semibold"
+              >Middle Name :</label
+            >
+            <input
+              type="text"
+              id="middleName"
+              name="middleName"
+              autocomplete="additional-name"
+              class="w-full p-2 focus:outline-0 focus:border-0"
+            />
+          </div>
+
+          <div class="grid gap-2">
+            <div
+              class="border flex items-center pl-2 rounded-md focus-within:border-primary has-[>input[data-invalid='true']]:border-red-500"
+            >
+              <label for="lastName" class="whitespace-nowrap font-semibold"
+                >Last Name :</label
+              >
+              <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                required
+                autocomplete="family-name"
+                data-invalid="false"
+                class="w-full p-2 focus:outline-0 focus:border-0"
+              />
+            </div>
+            <p class="text-red-500" id="lastNameError"></p>
+          </div>
+
+          <div class="grid gap-2">
+            <div
+              class="border flex items-center pl-2 rounded-md focus-within:border-primary has-[>input[data-invalid='true']]:border-red-500"
+            >
+              <label for="email" class="whitespace-nowrap font-semibold"
+                >Email :</label
+              >
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                autocomplete="email"
+                data-invalid="false"
+                class="w-full p-2 focus:outline-0 focus:border-0"
+              />
+            </div>
+            <p class="text-red-500" id="emailError"></p>
+          </div>
+
+          <div class="grid gap-2">
+            <div
+              class="border flex items-center pl-2 rounded-md focus-within:border-primary has-[input[data-invalid='true']]:border-red-500"
+            >
+              <label for="password" class="whitespace-nowrap font-semibold"
+                >Password :</label
+              >
+              <div class="w-full relative">
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  required
+                  data-invalid="false"
+                  class="w-full p-2 focus:outline-0 focus:border-0"
+                />
+                <button
+                  type="button"
+                  aria-label="Make password visible"
+                  class="passwordVisibilityToggle absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                >
+                  <img src="../src/images/hiddeneyes.png" alt="" />
+                  <img src="../src/images/openeyes.png" alt="" class="hidden" />
+                </button>
+              </div>
+            </div>
+            <p class="text-red-500" id="passwordError"></p>
+          </div>
+
+          <div class="grid gap-2">
+            <div
+              class="border flex items-center pl-2 rounded-md focus-within:border-primary has-[input[data-invalid='true']]:border-red-500"
+            >
+              <label
+                for="confirmPassword"
+                class="whitespace-nowrap font-semibold"
+                >Confirm Password :</label
+              >
+              <div class="w-full relative">
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                  required
+                  data-invalid="false"
+                  class="w-full p-2 focus:outline-0 focus:border-0"
+                />
+                <button
+                  type="button"
+                  aria-label="Make password visible"
+                  class="passwordVisibilityToggle absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                >
+                  <img src="../src/images/hiddeneyes.png" alt="" />
+                  <img src="../src/images/openeyes.png" alt="" class="hidden" />
+                </button>
+              </div>
+            </div>
+            <p class="text-red-500" id="confirmPasswordError"></p>
+          </div>
+
+          <div class="grid gap-2">
+            <div class="flex gap-2 items-center">
+              <input type="checkbox" name="terms" id="terms" class="w-6 h-6" />
+              <label for="terms"
+                >I agree to the
+                <a href="https://docs.google.com/document/d/1L-x9TmBo5p_Ed44OU58I87c0MAEIm36DkmcgnswlDt8/edit?usp=sharing" class="italic text-blue-500" target="_blank">Terms</a> and
+                <a href="" class="italic text-blue-500"
+                  >Privacy Policy</a
+                ></label
+              >
+            </div>
+            <p id="termsError" class="text-red-500"></p>
+          </div>
+
+          <button
+            type="submit"
+            class="text-white bg-primary rounded-xl w-fit py-3 px-8 cursor-pointer mx-auto hover:bg-primary/80"
+          >
+            Create Account
+          </button>
+        </form>
+
+        <div class="text-center mt-8 lg:mt-auto">
+          <p>
+            Already have an account?
+            <a href="../login/index.html" class="italic font-bold text-blue-500 underline hover:no-underline"
+              >Log in</a
+            >
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <script src="../scripts/signup.js"></script>
+  </body>
+</html>

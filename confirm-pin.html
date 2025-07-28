@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Confirm PIN</title>
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="max-h-dvh antialiased font-nunito text-secondary">
+    <main class="min-h-dvh lg:grid lg:grid-cols-2">
+      <section class="hidden lg:flex flex-col bg-primary xl:p-24">
+        <div class="flex flex-col gap-4">
+          <h1
+            class="font-poppins text-white text-3xl xl:text-5xl font-bold capitalize leading-[1.2]"
+          >
+            Simplify how you pay your bills
+          </h1>
+          <p class="text-tertiary mb-8">
+            With Canvoy, paying bills is fast, secure and frustration free.
+          </p>
+          <div
+            class="rounded-xl h-auto overflow-hidden mt-auto bg-no-repeat bg-cover"
+          > <img src="./src/images/createPin.png" alt="image" ></div>
+        </div>
+      </section>
+
+      <section
+        class="p-4 max-lg:max-w-lg max-lg:mx-auto lg:px-16 lg:py-8 h-full lg:flex lg:flex-col xl:px-24 lg:gap-6"
+      >
+        <header
+          class="flex items-center justify-start lg:justify-center relative"
+        >
+          <img src="../src/images/logo.png" alt="" class="w-24" />
+          <a
+            href="./create-pin.html"
+            class="flex items-center gap-2 absolute top-0 right-0"
+          >
+            <img src="../src/images/back-arrow.png" alt="" />
+            <span>Back</span>
+          </a>
+        </header>
+
+        <div class="flex flex-col gap-2 text-center mt-20 items-center">
+          <h2 class="text-blue-500 text-2xl font-bold capitalize font-poppins">
+            Confirm Your PIN
+          </h2>
+          <p>Re-enter your 4-digit PIN to confirm.</p>
+        </div>
+
+        <form id="confirmPinForm" class="mt-6 flex flex-col place-items-center place-items-center gap-2">
+          <div class="pin-container justify-center flex flex-row gap-2">
+            <input
+              type="password"
+              class="pin-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="0"
+              inputmode="numeric"
+              autocomplete="new-password"
+              name="pin"
+              id="pin-1"
+              aria-label="digit 1 of 4"
+              autofocus
+            />
+            <input
+              type="password"
+              class="pin-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="1"
+              inputmode="numeric"
+              autocomplete="new-password"
+              name="pin"
+              id="pin-2"
+              aria-label="digit 2 of 4"
+            />
+            <input
+              type="password"
+              class="pin-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="2"
+              inputmode="numeric"
+              autocomplete="new-password"
+              name="pin"
+              id="pin-3"
+              aria-label="digit 3 of 4"
+            />
+            <input
+              type="password"
+              class="pin-input border border-primary shadow-sm rounded-lg text-2xl p-2 text-center focus:border-primary focus:ring-1 focus:ring-primary focus:outline-primary w-12 h-12 lg:w-16 lg:h-16 xl:w-20 xl:h-20"
+              maxlength="1"
+              data-index="3"
+              inputmode="numeric"
+              autocomplete="new-password"
+              name="pin"
+              id="pin-4"
+              aria-label="digit 4 of 4"
+            />
+          </div>
+          <input type="hidden" name="full_pin" id="full-pin" />
+          <p id="errorMessage" class="text-red-500" aria-live="polite"></p>
+        </form>
+
+        <div class="text-center mt-16">
+          <button
+            type="submit"
+            form="confirmPinForm"
+            class="bg-primary text-white py-3 px-8 rounded-lg w-fit mx-auto cursor-pointer hover:bg-primary/80"
+          >
+            Confirm
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const pinInputs = document.querySelectorAll(".pin-input");
+      const pinForm = document.getElementById("confirmPinForm");
+      const errorMessage = document.getElementById("errorMessage");
+      const fullPinInput = document.getElementById("full-pin");
+
+      pinInputs.forEach((input, index) => {
+        input.addEventListener("input", (e) => {
+          const value = e.target.value;
+          if (value.length === 1 && /^\d$/.test(value)) {
+            if (index < pinInputs.length - 1) {
+              pinInputs[index + 1].focus();
+            }
+          } else if (value.length === 0) {
+            if (index > 0) {
+              pinInputs[index - 1].focus();
+            }
+          } else {
+            e.target.value = "";
+            errorMessage.textContent = "Please enter a valid digit (0-9).";
+          }
+        });
+
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Backspace" && input.value === "" && index > 0) {
+            pinInputs[index - 1].focus();
+          }
+        });
+      });
+
+      pinForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const pin = Array.from(pinInputs)
+          .map((input) => input.value)
+          .join("");
+        const createdPin = localStorage.getItem("createdPin");
+
+        if (pin.length !== 4 || !/^\d{4}$/.test(pin)) {
+          errorMessage.textContent = "Please enter a valid 4-digit PIN.";
+          return;
+        }
+
+        if (pin === createdPin) {
+          fullPinInput.value = pin;
+          errorMessage.textContent = "";
+          localStorage.removeItem("createdPin"); // Clear stored PIN
+          window.location.href = "dashboard.html"; // Directed to dashboard
+        } else {
+          errorMessage.textContent = "PIN does not match. Please try again.";
+          pinInputs.forEach((input) => (input.value = ""));
+          pinInputs[0].focus();
+        }
+      });
+    </script>
+  </body>
+</html>

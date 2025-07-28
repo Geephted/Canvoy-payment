@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/output.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Transaction History Section -->
+   <section class=" max-w-5xl mx-auto relative w-full px-0 border-t border-gray-500 pb-15 md:border-0 md:my-0 md:pb-0">
+    <div class="border-t border-gray-500 w-full pb-0">
+    <fieldset class="border-0  md:border-2 md:border-[#1976D2] p-4">
+      <div class="flex justify-between">
+        <div class="block md:hidden">
+        <a href="#"><img src="../src/images/Chevron left.png" alt="chevron-arrow" class="top-4 left-4"></a>
+    </div>
+    <div class="hidden md:block">
+      <a href="#"><img src="../src/images/left-arrow.png" alt="left-arrow" width="30" class="top-4 left-4">
+    </a>
+    </div>
+    <div>
+    <p class="text-center font-semibold ml-10 mb-3 m-auto font-['Poppins'] md:text-xl md:mt-20">Transaction History</p>
+    </div>
+    <div class="block md:hidden">
+      <a class="text-[#1976D2] font-['poppins'] text-xs md:text-sm" href="#">Download</a>
+    </div>
+    <div class="hidden md:block">
+      <a class="text-[#1976D2] font-['poppins'] text-xs md:text-sm" href="#">Check Statistics</a>
+    </div>
+    </div>
+    <div class="w-screen border-b border-gray-500 pb-3 [box-shadow:0_4px_6px_-2px_rgba(0,0,0,0.12)] md:hidden">
+  <div class="flex justify-center items-center gap-0 pt-3">
+    <a href="#" class="px-4 py-1 bg-blue-600 text-white rounded-l-md rounded-r-md font-['Poppins'] hover:bg-blue-700 transition text-sm">
+      Transactions
+    </a>
+    <a href="#" class="flex items-center gap-1 px-4 py-1 bg-gray-200 text-black rounded-r-md font-['Poppins'] hover:bg-gray-300 transition text-sm">
+      This Month ⏷
+    </a>
+  </div>
+</div>
+<div class="hidden md:flex items-center border border-gray-300 rounded-lg overflow-hidden w-full max-w-3xl mx-auto mt-4">
+  <input
+    id="searchInput"
+    type="text"
+    placeholder="Search a transaction"
+    class="w-full px-4 py-2 outline-none text-sm font-['Poppins']"
+  />
+</div>
+
+<div id="transactionList" class="w-full max-w-3xl mx-auto">
+  <fieldset class="border border-gray-300 rounded-md my-3 md:my-5 md:border-[#1976D2] ">
+    <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 13.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Empress Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] ">-#2000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 14.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Oyin Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-green-500">+#2,000,000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 13.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Empress Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-red-500">-#2000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 14.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Oyin Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-green-500">+#2,000,000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 13.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Empress Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-red-500">-#2000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 14.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Oyin Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-green-500">+#2,000,000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 13.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Empress Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-red-500">-#2000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 13.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Empress Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-red-500">-#2000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 14.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Oyin Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-green-500">+#2,000,000.00</p>
+  </div>
+  </div>
+  <div class="flex justify-between items-center p-4">
+  <div class="flex gap-2">
+    <div>
+    <img src="../src/images/image 14.png" alt="wallet" width="40">
+    </div>
+    <div>
+    <p class="font-light font-['Poppins']">Empress Tope</p>
+    <p class="text-sm font-light">10:24am, 19-05-2025</p>
+    </div>
+  </div>
+  <div>
+    <p class="font-['Poppins'] text-green-500">+#2000.00</p>
+  </div>
+  </div>
+  </fieldset>
+  <div class="hidden md:block md:py-1.5 md:mb-4 md:w-[30%] md: md:text-[#1976D2] md:border md:rounded-2xl md:text-center md:mx-auto">
+    <a href="#">Download Statement</a>
+  </div>
+</div>
+    </fieldset>
+   </section>
+   <section class="fixed bottom-0 w-full border-t border-gray-500 bg-white z-50 md:hidden">
+  <div class="flex justify-between items-center p-2 mx-auto w-[80%]">
+    <div>
+      <button class="flex flex-col items-center justify-center text-[#1976D2] text-sm font-['Poppins']">
+        <img src="../src/images/Vector 2.png" alt="vector-2" class="w-5 h-5 mb-1" />
+        Transactions
+      </button>
+    </div>
+    <div>
+      <button class="flex flex-col items-center justify-center text-sm font-['Poppins']">
+        <img src="../src/images/Line Chart.png" alt="chart" class="w-5 h-5 mb-1" />
+        Statistics
+      </button>
+    </div>
+  </div>
+</section>
+</html>
+<script src="../transaction-history/transaction-history.js"></script>
+</body>

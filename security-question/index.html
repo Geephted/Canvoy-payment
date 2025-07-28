@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Question</title>
+    <link rel="stylesheet" href="../src/output.css">
+</head>
+<body>
+    <div class="w-[90%] mx-auto h-screen flex flex-col md:w-[80%] md:overflow-hidden">
+    <div class="md:flex justify-center items-center md:mt-8 ">
+        <img src="../src/images/logo.png" alt="logo" class="w-18 mt-2 mb-10 md:w-24">
+    </div>
+    <div class="md:flex flex-col items-center">
+<h3 class="font-bold text-2xl">Answer your Security Questions</h3>
+<p class="italic mt-2 mb-6">You'll need your security questions to perform account recovery. Please keep your answers handy.</p>
+</div>
+<div class="relative w-full h-screen md:mt-5">
+<img src="../src/images/Faq 5 Streamline Milano.png" alt="faq-img" class=" md:ml-80 md:w-[40%]">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 border border-[#1976D2] rounded-md p-3 mt-2 w-[95%] max-w-md ">
+<select  name="securityQuestion1" id="securityQuestion1" class="block w-full">
+    <option value="question">How old are you?</option>
+    <option value="answer1">18-25 years</option>
+    <option value="answer2">26-35 years</option>
+    <option value="answer3">36-45 years</option>
+    <option value="answer4">46-55 years</option>
+    <option value="answer5">56 and above</option>
+</select>
+</div>
+<div class="absolute top-15 left-1/2 -translate-x-1/2 w-[95%] max-w-md ">
+    <input type="text" id="securityAnswer1" name="securityAnswer1" required
+           placeholder="Enter your answer" class="mt-2 block w-full border border-[#1976D2]  p-3 bg-white rounded-md">
+</div>
+
+<div class="absolute top-30 left-1/2 -translate-x-1/2 border border-[#1976D2] rounded-md p-3 mt-2 w-[95%] max-w-md ">
+<select name="securityQuestion2" id="securityQuestion2" class="block w-full ">
+    <option value="question">What is your first pet's name?</option>
+    <option value="answer1">Answer 1</option>
+    <option value="answer2">Answer 2</option>
+    <option value="answer3">Answer 3</option>
+    <option value="answer4">Answer 4</option>
+    <option value="answer5">Answer 5</option>
+</select>
+</div>
+<div class="absolute top-45 left-1/2 -translate-x-1/2 w-[95%] max-w-md">
+    <input type="text" id="securityAnswer2" name="securityAnswer2" required
+           placeholder="Enter your answer" class="mt-2 block w-full border border-[#1976D2]  p-3 bg-white rounded-md">
+           <p id="securityResponseMessage" class="text-sm mt-2 hidden text-center"></p>
+</div>
+<div class="absolute top-60 left-1/2 -translate-x-1/2 md:mt-10">
+    <button id="submitBtn" class="border-none bg-[#1976D2] py-2 px-8 mt-10 rounded-md text-white font-semibold">Submit</button>
+</div>
+</div>
+</div>
+<script src="../security-question/security-question.js"></script>
+</body>
+</html>

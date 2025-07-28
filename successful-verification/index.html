@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Successfully Verified</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="min-h-dvh antialiased font-nunito text-secondary">
+    <main class="min-h-dvh lg:grid lg:grid-cols-2">
+      <section class="hidden lg:flex flex-col bg-primary p-16 xl:p-24">
+        <div class="flex flex-col gap-4">
+          <h1
+            class="font-poppins text-white text-3xl xl:text-5xl font-bold capitalize leading-[1.2]"
+          >
+            Simplify how you pay your bills
+          </h1>
+          <p class="text-tertiary mb-8">
+            With Canvoy, paying bills is fast, secure and frustration free.
+          </p>
+
+          <div
+            class="rounded-xl h-[400px] overflow-hidden mt-auto bg-[url(./images/verification-1.png)] bg-no-repeat bg-cover"
+          >
+            <!-- <img
+              src="../src/images/verification-1.png"
+              alt=""
+              class="object-center"
+            /> -->
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="p-4 max-lg:max-w-lg max-lg:mx-auto lg:px-16 lg:py-8 h-full lg:flex lg:flex-col xl:px-24 lg:gap-12"
+      >
+        <header class="flex items-center justify-start lg:justify-center">
+          <img src="../src/images/logo.png" alt="" class="w-24" />
+        </header>
+
+        <div class="flex flex-col gap-12 text-center mt-6 items-center">
+          <div class="bg-primary-200 p-8 rounded-xl">
+            <img src="../src/images/successful.png" alt="" />
+          </div>
+
+          <div class="flex flex-col gap-4 items-center">
+            <p>You have successfully verified your account!</p>
+            <p>Please click 'Proceed' to continue the signup process.</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-16">
+          <a href="../create-pin.html"><button
+            type="button"
+            class="bg-primary text-white py-3 px-8 rounded-lg w-fit mx-auto cursor-pointer hover:bg-primary/80"
+          >
+            Proceed
+          </button></a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign In to Canvoy Payments</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/output.css" />
+  </head>
+  <body class="min-h-dvh antialiased font-nunito text-secondary">
+    <main class="p-4 min-h-dvh grid md:place-items-center">
+      <div
+        class="max-w-7xl mx-auto grid grid-cols-1 max-md:grid-rows-1 md:grid-cols-2"
+      >
+        <section
+          class="relative max-md:row-span-1 max-md:row-start-1 max-md:col-start-1 max-md:col-span-1 grid place-items-center"
+        >
+          <img src="../src/images/login.png" alt="Log in hero" />
+          <div
+            class="absolute top-0 left-0 w-full h-full bg-white/90 md:hidden"
+          ></div>
+        </section>
+        <section
+          class="max-md:row-span-1 max-md:row-start-1 max-md:col-start-1 max-md:col-span-1 max-md:relative max-md:z-10"
+        >
+          <div class="flex flex-col gap-8">
+            <a
+              href="../signup/"
+              class="font-bold text-2xl border border-primary rounded-md hover:bg-primary/20 p-2 w-fit self-end"
+              >Sign Up</a
+            >
+            <h1 class="font-black text-4xl font-poppins">Welcome back</h1>
+            <p>Log in to start</p>
+
+            <form novalidate id="loginForm" method="post">
+              <div class="grid gap-6">
+                <div class="grid gap-2">
+                  <div
+                    class="border flex items-center pl-2 rounded-md focus-within:border-primary has-[>input[data-invalid='true']]:border-red-500"
+                  >
+                    <label for="email" class="whitespace-nowrap font-semibold"
+                      >Email :</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      required
+                      autocomplete="email"
+                      data-invalid="false"
+                      class="w-full p-2 focus:outline-0 focus:border-0"
+                    />
+                  </div>
+                  <p class="text-red-500" id="emailError"></p>
+                </div>
+
+                <div class="grid gap-2">
+                  <div
+                    class="border flex items-center pl-2 rounded-md focus-within:border-primary has-[input[data-invalid='true']]:border-red-500"
+                  >
+                    <label
+                      for="password"
+                      class="whitespace-nowrap font-semibold"
+                      >Password :</label
+                    >
+                    <div class="w-full relative">
+                      <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        required
+                        data-invalid="false"
+                        class="w-full p-2 focus:outline-0 focus:border-0"
+                      />
+                      <button
+                        type="button"
+                        aria-label="Make password visible"
+                        class="passwordVisibilityToggle absolute right-2 top-1/2 -translate-y-1/2 cursor-pointer"
+                      >
+                        <img src="../src/images/hiddeneyes.png" alt="" />
+                        <img
+                          src="../src/images/openeyes.png"
+                          alt=""
+                          class="hidden"
+                        />
+                      </button>
+                    </div>
+                  </div>
+                  <p class="text-red-500" id="passwordError"></p>
+                </div>
+
+                <a href="#" class="italic w-fit">Forgot Password?</a>
+
+                <button
+                  type="submit"
+                  class="uppercase w-full bg-primary text-white rounded-full md:rounded-lg cursor-pointer tracking-wider py-3 hover:bg-primary/80"
+                >
+                  login
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script src="../scripts/login.js"></script>
+  </body>
+</html>

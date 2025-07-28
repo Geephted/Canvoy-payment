@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verification</title>
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body>
+  <section class="min-h-screen mx-auto bg-[url('/src/images/question-image1.png')] bg-contain bg-no-repeat bg-center h-auto md:px-10 lg:px-70">
+    <img src="./src/images/logo.png" alt="logo" class="m-auto max-w-[100px] w-full h-auto md:py-10 py-5">
+    <div class="mx-5 pb-4 border border-gray-300 rounded-lg bg-white/50 md:bg-white/70 mb-8">
+      <div class="text-center bg-white/50 md:bg-white/70 border border-white rounded-lg">
+        <h1 class="text-xl md:text-3xl font-bold text-gray-800 mt-4 font-poppins">Account Security Verification Questions</h1>
+        <p class="text-gray-800 max-w-lg m-auto px-2 md:px-0 font-nunito">Please select and answer two security questions to protect your account</p>
+      </div>
+
+      <div class="rounded-xl bg-white/50 md:bg-white/70">
+        <form id="verificationForm" class="space-y-8 bg-white/50 px-8">
+          <!-- First Verification Section -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-medium text-gray-800 mt-4 font-poppins">Question 1</h3>
+            </div>
+            <div>
+              <!-- <label class="block text-gray-700 mb-2 font-small"></label> -->
+              <select id="question1" name="question1" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary question-select text-md">
+                <option value="" disabled selected class="text-xs md:text-lg font-nunito  ">Select a question</option>
+                <option value="pet_name" class="text-xs md:text-lg font-nunito">What is your state of origin?</option>
+                <option value="birth_city" class="text-xs md:text-lg font-nunito">What city were you born in?</option>
+                <option value="mother_maiden" class="text-xs md:text-lg font-nunito">What is your mother's maiden name?</option>
+                <option value="first_car" class="text-xs md:text-lg font-nunito">What is your favorite colour?</option>
+                <option value="elementary_school" class="text-xs  md:text-lg font-nunito">What elementary school did you attend?</option>
+              </select>
+              <p id="question1-error" class="text-red-600 text-xs mt-1 min-h-[1rem]"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2 font-medium font-poppins">Your Answer</label>
+              <input type="text" id="answer1" name="answer1" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary input-field" placeholder="Enter your answer">
+              <p id="answer1-error" class="text-red-600 text-xs mt-1 min-h-[1rem]"></p>
+            </div>
+          </div>
+
+          <!-- Second Verification Section -->
+          <div class="space-y-2">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-medium text-gray-800 font-poppins">Question 2</h3>
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2 font-medium"></label>
+              <select id="question2" name="question2" class="w-full max-w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary question-select text-md">
+                <option value="" disabled selected class="text-xs md:text-lg">Select a question</option>
+                <option value="first_school" class="text-xs md:text-lg">What was the name of your first school?</option>
+                <option value="favorite_movie" class="text-xs md:text-lg">What is your favorite movie?</option>
+                <option value="childhood_street" class="text-xs md:text-lg">What street did you grow up on?</option>
+                <option value="childhood_nickname" class="text-xs md:text-lg">What was your childhood nickname?</option>
+                <option value="sports_team" class="text-xs md:text-lg">What is your favorite sports team?</option>
+              </select>
+              <p id="question2-error" class="text-red-600 text-xs mt-1 min-h-[1rem]"></p>
+            </div>
+            <div>
+              <label class="block text-gray-700 mb-2 font-medium">Your Answer</label>
+              <input type="text" id="answer2" name="answer2" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary input-field" placeholder="Enter your answer">
+              <p id="answer2-error" class="text-red-600 text-xs mt-1 min-h-[1rem]"></p>
+            </div>
+          </div>
+
+          <div class="pt-4">
+            <div class="flex justify-center">
+              <button type="submit" id="submitBtn" class="w-fit max-w-xs bg-primary text-white p-3 px-6 sm:py-3 sm:px-8 text-lg sm:text-xl md:text-xl font-medium rounded-lg hover:bg-primary-dark flex items-center justify-center mb-4">
+                Submit
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+  <script src="./scripts/signup_verificatn_qutn.js"></script>
+</body>
+</html>
